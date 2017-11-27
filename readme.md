@@ -1,6 +1,6 @@
-<h2>About Datatable</h2>
+<h2><a href="https://datatables.net/">About Datatable</a></h2>
 <p>DataTables is a plug-in for the <a href="//jquery.com">jQuery</a> Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.</p>
-<h3>Server-side Processing</h3>
+<h3><a href="https://datatables.net/examples/data_sources/server_side.html">Server-side Processing</a></h3>
 <p>There are many ways to get your data into DataTables, and if you are working with seriously large databases, you might want to consider using the
 					server-side options that DataTables provides. With server-side processing enabled, all paging, searching, ordering actions that DataTables performs are handed
 					off to a server where an SQL engine (or similar) can perform these actions on the large data set (after all, that's what the database engine is designed for!).
@@ -17,6 +17,8 @@
 		</li>
 	</ul>
 
+	<hr>
+	
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
