@@ -1,3 +1,22 @@
+<h2>About Datatable</h2>
+<p>DataTables is a plug-in for the <a href="//jquery.com">jQuery</a> Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.</p>
+<h3>Server-side Processing</h3>
+<p>There are many ways to get your data into DataTables, and if you are working with seriously large databases, you might want to consider using the
+					server-side options that DataTables provides. With server-side processing enabled, all paging, searching, ordering actions that DataTables performs are handed
+					off to a server where an SQL engine (or similar) can perform these actions on the large data set (after all, that's what the database engine is designed for!).
+					As such, each draw of the table will result in a new Ajax request being made to get the required data.</p>
+					
+<p>In addition to the above code, the following Javascript library files are loaded for use in this example:</p>
+
+<ul>
+		<li>
+			<a href="//code.jquery.com/jquery-1.12.4.js">//code.jquery.com/jquery-1.12.4.js</a>
+		</li>
+		<li>
+			<a href="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js">https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js</a>
+		</li>
+	</ul>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
