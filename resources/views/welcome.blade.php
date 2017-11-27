@@ -18,7 +18,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 align="center">Larabel 5.5 Datatable Serverside Processing</h2>
+                    <h2 align="center">Laravel 5.5 Datatable Serverside Processing</h2>
 					
 					<table id="example" class="table table-hover table-striped">
 						<thead>
