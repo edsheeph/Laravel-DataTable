@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Ajax Laravel DataTable</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -17,10 +17,9 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-12">
-                    <h2 align="center">Laravel 5.5 Datatable Serverside Processing</h2>
+                <div class="col-md-12 py-5">
 					
-					<table id="example" class="table table-hover table-striped">
+					<table id="userTable" class="table table-hover table-striped">
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -29,14 +28,6 @@
 								<th>Action</th>
 							</tr>
 						</thead>
-						<tfoot>
-							<tr>
-								<th>Name</th>
-								<th>Email</th>
-								<th>Created at</th>
-								<th>Action</th>
-							</tr>
-						</tfoot>
 					</table>
                 </div>
             </div>
@@ -46,20 +37,20 @@
 		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 		
 		<script>
-			$('#example').DataTable( {
+			$('#userTable').DataTable( {
 				"processing": true,
 				"serverSide": true,
 				"ajax": {
-					"url":"<?= route('dataProcessing') ?>",
-					"dataType":"json",
-					"type":"POST",
-					"data":{"_token":"<?= csrf_token() ?>"}
+					"url" : "{{ route('dataProcessing') }}",
+					"dataType" : "json",
+					"type" : "POST",
+					"data" : { "_token":"{{ csrf_token() }}" }
 				},
 				"columns":[
-					{"data":"name"},
-					{"data":"email"},
-					{"data":"created_at"},
-					{"data":"action","searchable":false,"orderable":false}
+					{ "data" : "name" },
+					{ "data" : "email" },
+					{ "data" : "created_at" },
+					{ "data" : "action","searchable":false,"orderable":false }
 				]
 			} );
 		</script>

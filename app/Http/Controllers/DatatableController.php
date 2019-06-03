@@ -10,7 +10,7 @@ class DatatableController extends Controller
     //
 	
 	public function getUsers(Request $request){
-		//print_r($request->all());
+		// dd($request->all());
 		$columns = array(
 			0 => 'name',
 			1 => 'email',
@@ -53,20 +53,20 @@ class DatatableController extends Controller
 				$nestedData['email'] = $r->email;
 				$nestedData['created_at'] = date('d-m-Y H:i:s',strtotime($r->created_at));
 				$nestedData['action'] = '
-					<a href="#!" class="btn btn-warning btn-xs">Edit</a>
+					<a href="#!" class="btn btn-success btn-xs">Edit</a>
 					<a href="#!" class="btn btn-danger btn-xs">Delete</a>
 				';
 				$data[] = $nestedData;
 			}
 		}
 		
-		$json_data = array(
+		$like = array(
 			"draw"			=> intval($request->input('draw')),
 			"recordsTotal"	=> intval($totalData),
 			"recordsFiltered" => intval($totalFiltered),
 			"data"			=> $data
 		);
 		
-		echo json_encode($json_data);
+		echo json_encode($like);
 	}
 }
